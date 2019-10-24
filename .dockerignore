@@ -1,12 +1,15 @@
 .venv/
 venv/
 tmp/
+data/
 
 .env
 tags
 
 *.pyc
 *.pyo
+
+*.session
 
 __pycache__/
 
