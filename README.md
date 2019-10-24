@@ -7,9 +7,11 @@
 ```
 make all
 ```
-3. Set 'TG_API_ID' and `TG_API_HASH` in `.env` (from https://my.telegram.org).
+3. Set `TG_API_ID` and `TG_API_HASH` in `.env` (from https://my.telegram.org).
 4. Authorize in Telegram:
-*IMPORTANT*: 2FA must be disabled.
+
+**IMPORTANT**: 2FA must be disabled.
+
 ```
 make telegram
 ```
