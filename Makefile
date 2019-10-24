@@ -1,6 +1,6 @@
 .SILENT: ;
 
-all: venv requirements config
+all: venv requirements config data
 
 venv:
 	if [ ! -d .venv ]; then \
@@ -17,6 +17,12 @@ requirements:
 config:
 	if [ ! -f .env ]; then \
 	    cp .env.example .env; \
+	fi \
+
+data:
+	if [ ! -d data ]; then \
+	    mkdir data  \
+	    && touch data/reports.csv; \
 	fi \
 
 telegram:
