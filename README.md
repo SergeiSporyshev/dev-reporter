@@ -19,12 +19,17 @@ make telegram
 
 ## Usage
 
-1. Define reports data in `data/reports.csv` in the following format:
+* Define reports data in `data/reports.csv` in the following format:
 ```
 date;project;description;time
 ```
 
-2. Run app:
+* Run app:
 ```
 .venv/bin/python -m dev_reporter
+```
+
+* Run app via docker
+```
+$ docker run --rm -it -v {path/to/repo}:/app {image_name} python -m dev_reporter
 ```
