@@ -18,7 +18,7 @@ CSV_DELIMITER = os.getenv('CSV_DELIMITER', ',')
 # telegram settings
 TG_API_ID = os.getenv('TG_API_ID')
 TG_API_HASH = os.getenv('TG_API_HASH')
-TG_SESSION_NAME = os.getenv('TG_SESSION_NAME', 'dev_reporter')
+TG_SESSION_NAME = os.getenv('TG_SESSION_NAME')
 TG_CHAT_ID = int(os.getenv('TG_CHAT_ID'))
 
 # proxy settings
