@@ -55,7 +55,10 @@ def format_telegram_message(reports: List[Report]) -> str:
     for k in sorted(reports_map.keys()):
         merged_reports = '\n'.join(r.to_str() for r in reports_map[k])
         items.append(f'/итог {k}\n{merged_reports}')
-    return '\n\n'.join(items)
+
+    if items:
+        return '\n'.join(items)
+    return
 
 
 def validate_date(date_str: str) -> datetime.date:
@@ -115,4 +118,8 @@ def main():
     """Main function."""
     reports = get_reports()
     message = format_telegram_message(reports)
-    telegram.send_message(message)
+    if message is not None:
+        telegram.send_message(message)
+        print(message)
+    else:
+        print('Nothing to send')
