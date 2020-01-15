@@ -20,7 +20,7 @@ class Report:
                  time: str = None):
         self.date = validate_date(date)
         self.project = project
-        self.info = info
+        self.info = info or '-'
         self.time = time
 
     def __lt__(self, other):
